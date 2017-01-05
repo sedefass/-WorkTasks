@@ -1,42 +1,24 @@
 function solve(args){
     let arr = args;
 
-    // //sorting the array
-    // for (let i = 1; i < arr.length - 2; i++){
-    //     let min = arr[i];
-    //     let index = i;
-    //     for (let j = i + 1; j < arr.length - 1; j++){
-    //         if(arr[j] < min){
-    //             min = arr[j];
-    //             index = j;
-    //         }
-    //     }
-
-    //     if(index !== i){
-    //         let temp = arr[i];
-    //         arr[i] = arr[index];
-    //         arr[index] = temp;
-    //     }
-    // }
-
-    //binary search
-    let number = arr[arr.length - 1];
-    let leftIndex = 1;
-    let rightIndex = arr.length - 2;
-    let check  =  false;
-    let index = -1;
+    let searchNumber = +arr[arr.length - 1];
+    let leftIndex = 1; //first element is the total count of numbers among which is the binary search
+    let rightIndex = arr.length - 2; //last element is the search number
+    let index = 0;
+    let check = false;
 
     while (!check && leftIndex <= rightIndex){
-        let temp = ((leftIndex + rightIndex) / 2) | 0;
-        console.log(`temp = ${temp} value = ${arr[temp]}`);
+        let currentIndex = ((leftIndex + rightIndex) / 2) | 0;
+        let currentElement = +arr[currentIndex];
+        // console.log(`currentIndex = ${currentIndex} value = ${arr[currentIndex]}`);
 
-        if (arr[temp] === number){
-            check =  true;
-            index = temp;
-        } else if (number < arr[temp]){
-            rightIndex = temp + 1;
+        if (currentElement === searchNumber){
+            index = currentIndex;
+            check = true;
+        } else if (searchNumber < currentElement){
+            rightIndex = currentIndex - 1;
         } else {
-            leftIndex = temp - 1;
+            leftIndex = currentIndex + 1;
         }
     }
 

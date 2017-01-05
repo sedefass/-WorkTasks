@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "C:/xampp/htdocs/!WorkTasks/03.JavaScrip Fundamentals (TA)/05.Arrays/05. Selection sort.js",
+            "program": "C:/xampp/htdocs/-WorkTasks/03.JavaScrip Fundamentals (TA)/05.Arrays/07. Binary search.js",
             "cwd": "${workspaceRoot}"
         },
         {
