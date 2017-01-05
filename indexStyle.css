@@ -1,0 +1,80 @@
+/*universal properties*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #1e3741;
+    color: #7b9ead;
+    font-size: 22px;
+}
+a{
+    color: #7b9ead;
+    text-decoration: none;
+}
+
+/*header properties*/
+header{
+    border-bottom: 3px solid #337d8f;
+}
+    header h1{
+        font-size: 40px;
+        padding-left: 10px;
+    }
+
+/*section properties*/
+section{
+    border-bottom: 3px solid #337d8f;
+    width: 433px;
+}
+    section h1{
+        font-size: 28px;
+        width: 420px;
+        border: 3px solid #337d8f;
+        border-top: none;
+        border-left: none;
+        padding-left: 10px;
+    }
+    section h1:before,section h1:after{
+        content: "*";
+    }
+    section li{
+        color: #7b9ead;
+        padding-left: 5px;
+        border-bottom: 3px solid #337d8f;
+    }
+    section li:last-of-type{
+        border: none;
+    }
+    section ul{
+        list-style:none;
+        position: relative;
+        width: 400px;
+        border-right: 3px solid #337d8f;
+    }
+    section > ul{
+        padding-left: 30px;
+    }
+        section ul ul{
+            display: none;
+            position: absolute;
+            left: 420px;
+            top: -3px;
+        }
+        section ul li{
+            position: relative;
+        }
+        section ul li:hover{
+            color: white;
+        }
+            section ul li a:hover{
+                color: white;
+                text-decoration: underline;
+            }
+        section ul li:hover > ul{
+            background: #1e3741;
+            border: 3px solid #337d8f;
+            display: block;
+            position: absolute;
+            left: 400px;
+        }

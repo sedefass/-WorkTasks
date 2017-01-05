@@ -1,0 +1,118 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Registration form</title>
+</head>
+
+<body>
+	<form name="registrationForm" method="POST">
+		<table border="1" cellspacing="0" cellpadding="3">
+			<tr>
+				<td>
+					<p align="right"><strong>Last Name</strong></p>
+				</td>
+				<td colspan="3"><input type="text" style="width:100%" placeholder="Enter Last Name" /></td>
+			</tr>
+			<tr>
+				<td>
+					<p align="right"><strong>First Name</strong></p>
+				</td>
+				<td colspan="3"><input type="text" style="width:100%" placeholder="Enter First Name" /></td>
+			</tr>
+			<tr>
+				<td>
+					<p align="right"><strong>Adress</strong></p>
+				</td>
+				<td colspan="3"><textarea type="text" style="width:100%; height:50px" name="Adress" placeholder="Enter Adress"></textarea></td>
+			</tr>
+			<tr>
+				<td>
+					<p align="right"><strong>City</strong></p>
+				</td>
+				<td><input type="text" style="width:100%" placeholder="Enter City" >/</td>
+					<td style="width:35px">
+						<p align="right"><strong>State</strong></p>
+					</td>
+					<td style="width:70px"><input type="text" style="width:100%" placeholder="Enter State" /></td>
+			</tr>
+			<tr>
+				<td>
+					<p align="right"><strong>Zip/Postal Code</strong></p>
+				</td>
+				<td colspan="3"><input type="input" style="width:35%" placeholder="Zip/Postal Code" /></td>
+			</tr>
+			<tr>
+				<td>
+					<p align="right"><strong>Country</strong></p>
+				</td>
+				<td colspan="3">
+					<select style="width:70%">
+                        <option value="Value 1" selected="selected">Bulgaria</option>
+                        <option value="Value 2">Germany</option>
+                        <option value="Value 2">France</option>
+                    </select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p align="right"><strong>Phone (country code,<br>area code, number)</strong></p>
+				</td>
+				<td colspan="3">
+					(+ <input type="text" style="width:50px" value="359" /> )
+					<input type="text" style="width:50px" placeholder="##" /> -
+					<input type="text" style="width:155px" placeholder="#######" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p align="right"><strong>E-mail</strong></p>
+				</td>
+				<td colspan="3"><input type="email" style="width:100%" placeholder="Enter E-mail" /></td>
+			</tr>
+			<tr>
+				<td>
+					<p align="right"><strong>Birth date</strong></p>
+				</td>
+                <td colspan="3">
+					Month <input type="text" style="width:30px" placeholder="##" /> Day
+					<input type="text" style="width:30px" placeholder="##" /> Year(4 digits) 
+					<input type="text" style="width:60px" placeholder="#######" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p align="right"><strong>Gender</strong></p>
+				</td>
+				<td colspan="3">
+					<select style="width:35%">
+                        <option value="Value 1" selected="selected">Male</option>
+					    <option value="Value 2">Female</option>
+                    </select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p align="right"><strong>Starting date</strong></p>
+                    <td colspan="3"><input type="radio" name="startDate" value="Spring 2016"/> Spring 2016 <input type="radio" name="startDate" value="Summer 2016"/> Summer 2016 </td>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p align="right"><strong>Comments/Questions</strong></p>
+				</td>
+                <td colspan="3"><textarea type="text" style="width:100%; height:75px" name="Adress" placeholder="Enter Your Comments/Questions"></textarea></td>
+			</tr>
+			<tr>
+				<td colspan="4" style="background:cyan">
+					<p align="center">
+						<input type="submit" value="Submit" />
+						<input type="reset" value="Clear This Form" />
+					</p>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+
+</html>

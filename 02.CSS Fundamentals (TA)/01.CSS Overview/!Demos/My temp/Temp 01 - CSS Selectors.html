@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temp 01 - CSS Selectors</title>
+    <link rel="stylesheet" type="text/css" href="style/Temp 01 - CSS Selectors.css">
+</head>
+<body>
+
+    <!-- COMMON SELECTORS -->
+    <p class="header">This text should be red colored</p>
+    <hr>
+
+    <p class="greenPclass">This thext should be green</p>
+    <p id="greenPid">This thext should be also green</p>
+    <hr>
+
+    <p>Some <a class="underlined">unferline</a> text here</p>
+    <hr>
+
+    <div>Table 1:</div>
+    <table border="1">
+        <tr>
+            <td>background of all tables must be green</td>
+            <td>background of all tables must be green</td>
+        </tr>    
+    </table>
+    <div>Table 2:</div>
+    <table border="1">
+        <tr>
+            <td>background of all tables must be green</td>
+            <td>background of all tables must be green</td>
+        </tr>    
+        <tr>
+            <td>background of all tables must be green</td>
+            <td>background of all tables must be green</td>
+        </tr>  
+    </table>
+    <hr>
+
+    Division 1:
+    <div></div>
+    <p class="first-sibling">some text</p>
+    <p class="first-sibling">some text</p>
+    <p class="first-sibling">some text</p>  
+    Division 2:
+    <div></div>
+    <p >some text</p>
+    <p class="first-sibling">some text</p>
+    <p class="first-sibling">some text</p>
+    <hr>
+
+    Division 3:
+    <div>
+        <p class="error">error</p>
+        <p class="no-error">no error</p>
+        <p class="error">error</p>  
+    </div>
+    <hr>
+
+    Division 4:
+    <p class="firstClassExample">first clas</p>
+    <p class="secondClassExample">second clas</p>
+    <p class="firstClassExample secondClassExample">
+        first and second class at the same time
+    </p>  
+    <hr>
+
+    <!-- ATRIBUTE SELECTORS -->
+    <div>
+        <a title="title01" href="">here is the first link</a>
+        <a title="title02" href="">here is the second link</a>
+        <a title="title03" href="">here is the third link</a>
+    </div> 
+    <br/>
+    <div>
+        <a title="title04" href="">here is the first link</a>
+        <a title="title05" href="">here is the second link</a>
+        <a title="title06" href="">here is the third link</a>
+    </div> 
+    <br/>
+    <div>
+        <a title="title04 max" href="">here is the first link</a>
+        <a title="title05 max" href="">here is the second link</a>
+        <a title="title06 max" href="">here is the third link</a>
+    </div> 
+    <hr>
+
+    <!-- PSEUDO SELECTORS -->
+    <a class="hoover-test" href="">Hoover over the link - can you notice the change?</a>
+    <p class="firstLineText">
+        През 1154 г. Ото Фрайзингски установява контрол над търговията със сол, 
+        добивана в Райхенхал, тъй като моста на река Изар при Оберфьоринг 
+        (днес в Мюнхен) е под негово управление. Вследствие на конфликт с 
+        херцога на Бавария, Хайнрих Лъв, мостът е подпален, а Хайнрих Лъв 
+        построява нов мост по-надолу по течението на реката, който търговците 
+        са задължени да ползват. [3] Така през 1158 г. Мюнхен е основан от Хайнрих 
+        Лъв. [2] През 1210 г. придобива статута на град (civitas). [4] През 1327 г. е 
+        опожарен. През 1632 г. е превзет от Швеция по време на 30-годишната война. 
+        Хабсбургите си го връщат през 1705 г. През 1806 г. става столица на новата 
+        държава Кралство Бавария. През 1882 г. градът е електрифициран.
+    </p>
+    <p class="before-after">Look at the begining and the end of this text</p>
+    <hr>
+
+    <table border="1">
+        <tr>
+            <td class="child-table01">11111</td>
+            <td class="child-table01">11111</td>
+            <td class="child-table01">11111</td>
+            <td class="child-table01">11111</td>
+            <td class="child-table01">11111</td>
+        </tr>
+        <tr>
+            <td class="child-table01">22222</td>
+            <td class="child-table01">22222</td>
+            <td class="child-table01">22222</td>
+            <td class="child-table01">22222</td>
+            <td class="child-table01">22222</td>
+        </tr>
+        <tr>
+            <td class="child-table01">33333</td>
+            <td class="child-table01">33333</td>
+            <td class="child-table01">33333</td>
+            <td class="child-table01">33333</td>
+            <td class="child-table01">33333</td>
+        </tr>
+        <tr>
+            <td class="child-table01">44444</td>
+            <td class="child-table01">44444</td>
+            <td class="child-table01">44444</td>
+            <td class="child-table01">44444</td>
+            <td class="child-table01">44444</td>
+        </tr>
+        <tr>
+            <td class="child-table01">55555</td>
+            <td class="child-table01">55555</td>
+            <td class="child-table01">55555</td>
+            <td class="child-table01">55555</td>
+            <td class="child-table01">55555</td>
+        </tr>
+    </table>
+    <br/>
+    <table border="1">
+        <tr>
+            <td class="child-table02">11111</td>
+            <td class="child-table02">11111</td>
+            <td class="child-table02">11111</td>
+            <td class="child-table02">11111</td>
+            <td class="child-table02">11111</td>
+        </tr>
+        <tr>
+            <td class="child-table02">22222</td>
+            <td class="child-table02">22222</td>
+            <td class="child-table02">22222</td>
+            <td class="child-table02">22222</td>
+            <td class="child-table02">22222</td>
+        </tr>
+        <tr>
+            <td class="child-table02">33333</td>
+            <td class="child-table02">33333</td>
+            <td class="child-table02">33333</td>
+            <td class="child-table02">33333</td>
+            <td class="child-table02">33333</td>
+        </tr>
+        <tr>
+            <td class="child-table02">44444</td>
+            <td class="child-table02">44444</td>
+            <td class="child-table02">44444</td>
+            <td class="child-table02">44444</td>
+            <td class="child-table02">44444</td>
+        </tr>
+        <tr>
+            <td class="child-table02">55555</td>
+            <td class="child-table02">55555</td>
+            <td class="child-table02">55555</td>
+            <td class="child-table02">55555</td>
+            <td class="child-table02">55555</td>
+        </tr>
+    </table>
+
+
+    <footer>
+        <hr>
+        <a href="../index.html">Return to index page</a>
+    </footer>
+</body>
+</html>

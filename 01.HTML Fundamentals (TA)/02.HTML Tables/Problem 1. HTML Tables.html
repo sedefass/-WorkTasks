@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Tables</title>
+    <style>
+        /*For the table with the fruits*/
+        
+        table#table_with_fruits {
+            border: none;
+            /*border-collapse: collapse; */
+            /*there will be no cell margin*/
+            font-size: 18px;
+            width: 425px;
+            height: 160px;
+            padding: 0px;
+            margin: 25px 0px;
+        }
+        
+        table#table_with_fruits th {
+            font-size: 30px;
+            border: none;
+            padding: 0px 0px;
+            margin: 0px;
+        }
+        
+        table#table_with_fruits td {
+            border: none;
+            padding: 0px 10px 0px 0px;
+            margin: 0px;
+        }
+        /*For the table with the letters*/
+        
+        table#table_with_letters {
+            border: 1px solid black;
+            border-spacing: 2px;
+            /*border-collapse: collapse; */
+            /*there will be no cell margin*/
+            font-size: 18px;
+            width: 200px;
+            height: 160px;
+            padding: 0px;
+            margin: 25px 0px;
+        }
+        
+        table#table_with_letters td {
+            border: 1px solid black;
+            width: 20%;
+            padding: 3px;
+        }
+        
+        td#td_left {
+            text-align: left;
+        }
+        
+        td#td_center {
+            text-align: center;
+        }
+        
+        td#td_right {
+            text-align: right;
+        }
+        
+        td#td_bottom_right {
+            text-align: right;
+            vertical-align: bottom;
+        }
+        
+        footer {
+            margin: 25px 0px 0px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <article>
+            <table id="table_with_fruits">
+                <thead>
+                    <tr>
+                        <th colspan="2"><em>Fresh Fruits</em></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            It has long been known that a diet<br> that includes at least a few<br> servings of fresh fruit
+                            every day
+                            <br> will help keep you healthy, fit and<br> trim.
+                        </td>
+                        <td>
+                            <img src="imgs/fruits.jpg" width="110px">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+
+        <article>
+            <table id="table_with_letters">
+                <tr>
+                    <td id="td_center" colspan="3">Title goes here</td>
+                    <td id="td_center">A</td>
+                    <td id="td_right">B</td>
+                </tr>
+                <tr>
+                    <td id="td_left" rowspan="3">C</td>
+                    <td id="td_center">D</td>
+                    <td id="td_center">E</td>
+                    <td id="td_center">F</td>
+                    <td id="td_left">G</td>
+                </tr>
+                <tr>
+                    <td id="td_center">H</td>
+                    <td id="td_center" colspan="2">I</td>
+                    <td id="td_bottom_right" rowspan="2">J</td>
+                </tr>
+                <tr>
+                    <td id="td_center">K</td>
+                    <td id="td_center">L</td>
+                    <td id="td_center">M</td>
+                </tr>
+                <tr>
+                    <td id="td_right">N</td>
+                    <td id="td_center" colspan="4">O</td>
+                </tr>
+            </table>
+        </article>
+    </main>
+
+    <footer>
+        <hr>
+        <a href="../../index.html">Return to index page</a>
+    </footer>
+
+</body>
+
+</html>

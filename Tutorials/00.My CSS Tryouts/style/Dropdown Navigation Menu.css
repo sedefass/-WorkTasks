@@ -1,0 +1,98 @@
+body{
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+    font-family: Arial;
+    font-size: 18px;
+}
+
+#nav{
+    background-color: #222;
+}
+    #nav-wrapper{
+        width: 960px;
+        margin: 0 0;
+        text-align: left;
+    }
+    #nav ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        position: relative;
+    }
+    #nav ul li{
+        display: inline-block;
+    }
+    #nav ul li:hover{
+        background-color: #333;
+    }
+    #nav ul li img{
+        width: 13px;
+        /*height: 15px;*/
+        vertical-align: 0px;
+        padding-left: 10px;
+    }
+    #nav ul li a{
+        color: #ccc;
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+    }
+    #nav ul li a:hover{
+        color: #ccc;
+        text-decoration: none;
+    }
+    #nav ul li:hover > ul{
+        display: block;
+    }
+        #nav ul ul{
+            display: none;
+            position: absolute;
+            background-color: #333;
+            border: 5px solid #222;
+            border-top: 0;
+            margin-left: -5px;
+            min-width: 150px;
+        }
+        #nav ul ul li{
+            display: block;
+            position: relative;
+        }
+        #nav ul ul li a{
+            color: #ccc;
+        }
+        #nav ul ul li a:hover{
+            color: #099;
+        }
+        #nav ul ul li img{
+        width: 13px;
+        /*height: 15px;*/
+        float: right;
+        padding-top: 5px;
+    }
+        #nav ul ul li:hover ul{
+            display: block;
+        }
+
+            /*new code*/
+            #nav ul ul ul{
+                display: none;
+                position: absolute;
+                top: -4.5px;
+                left: 155px;
+                background-color: #333;
+                border: 5px solid #222;
+                margin-left: -5px;
+                min-width: 150px;
+            }
+            #nav ul ul ul li{
+                display: block;
+            }
+            #nav ul ul ul li a,visited{
+                color: #ccc;
+            }
+            #nav ul ul ul li a:hover{
+                color: #099;
+            }
+
+

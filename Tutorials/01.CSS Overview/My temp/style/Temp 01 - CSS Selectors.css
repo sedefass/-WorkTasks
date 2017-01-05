@@ -1,0 +1,155 @@
+/*-------------------------COMMON SELECTORS-------------------------*/
+
+/*selected by tag*/
+body{
+    background-color: lightblue; 
+}
+
+/*1.Selected by class (same for id, but insted of . # is used)*/
+.header{
+    color: red;
+}
+
+/*2.Selectors can be combined with commas*/
+.greenPclass, p#greenPid{
+    color: green;
+}
+
+/*3.This will match all <a> tags that are inside of <p>*/
+p a.underlined {
+    text-decoration: underline;
+}
+
+/*4.Universal selector (avoid or use with care!)*/
+tr *  {
+    background-color: #4CAF50; 
+}
+
+/*5.This will match all siblings with class name first-sibling 
+that appear immediately after <div> tag*/
+div + .first-sibling{
+    color: red;
+}
+
+/*6.> selector – matches direct child nodes. 
+This will match all elements with class error, direct children of <p> tag*/
+div > .error {
+    color: red;
+}
+
+/*7.Matches elements with both (all) classes applied at the same time*/
+.firstClassExample.secondClassExample{
+    color: red;
+}
+
+/*-------------------------ATRIBUTE SELECTORS------------------------*/
+
+/*[ ] selects elements based on attributes*/
+
+/*Element with a given attributeSelects <a> elements with title*/
+a[title]{
+    border: 1px solid black;
+    padding: 0px 5px;
+}
+
+/*Elements with a concrete attribute value*/
+a[title=title05]{
+    border: 1px solid red;
+    padding: 0px 35px;
+}
+
+/*Elements whose attribute values contain a word*/
+a[title*=max]{
+    font-size: 30px;
+}
+
+/*-------------------------PSEUDO SELECTORS------------------------*/
+
+/*Pseudo-classes define state
+:hover, :visited, :active , :lang*/
+
+a.hoover-test:hover {
+    color: red;
+}
+
+p.firstLineText:first-line {
+    font-weight: bold;
+}
+
+p.firstLineText:first-letter {
+    color: darkred;
+    font-size: 28pt;
+}
+
+.before-after:before {
+    content: "»";
+}
+
+.before-after:after {
+    content: "«";
+}
+
+/*An E element, the n-th child of its parent*/
+/*Check it with 2n and with 2n+1*/
+td.child-table01:nth-child(2){
+    background-color: deeppink; 
+}
+
+/*An E element, the n-th child of its parent, counting from the last on*/
+td.child-table02:nth-last-child(1){
+    background-color: deeppink; 
+}
+
+/*E:nth-of-type(n): An E element, the n-th sibling of its type*/
+/*E:nth-last-of-type(n): An E element, the n-th sibling of its type, counting from the last one*/
+/*E:last-child: An E element, last child of its parent*/
+/*E:first-of-type: An E element, first sibling of its type*/
+/*E:last-of-type: An E element, last sibling of its type*/
+/*E:only-child: An E element, only child of its parent*/
+/*E:only-of-type: An E element, only sibling of its type*/
+/*E:empty:An E element that has no children (including text nodes)*/
+/*http://www.w3.org/TR/css3-selectors/#structural-pseudos*/
+
+
+/*-------------------------STRUCTURAL SELECTORS------------------------*/
+/*E:enabled
+A user interface element E which is enabled
+E:disabled
+A user interface element E which is disabled
+E:checked
+A user interface element E which is checked (for instance a radio-button or checkbox)
+Currently supported only in Opera and IE10 !*/
+
+/*-------------------------UI SELECTORS------------------------*/
+/*E:target
+An E element being the target of the referring URI
+E:not(s)
+An E element that does not match simple selector
+E~F
+An F element preceded by an E element*/
+
+
+
+
+/*for the text with the horizontal line*/
+.Divider {
+    width: 100%; 
+    height: 30px;  
+    text-align: center;
+    display: flex;
+}
+.right-side{
+    width: 46.665%;
+    padding: 20px 0px;
+}
+.left-side{
+    font-size: 20px;
+    width: 6.67%;
+    padding: 20px 0px;
+}
+/*
+<div class="Divider">
+    <div class="left-side"><span>1</span></div>
+    <div class="right-side"><hr></div>
+</div>
+*/

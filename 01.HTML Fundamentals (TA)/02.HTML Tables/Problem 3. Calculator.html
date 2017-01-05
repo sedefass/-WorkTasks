@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Problem 3. Calculator</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		table {
+			background-color: #EC7063;
+			width: 350px;
+			margin: 15px 10px;
+		}
+		
+		#button {
+			background-color: #A569BD;
+			border: none;
+			font-family: 'Oswald';
+			font-size: 40px;
+			color: #FDFEFE;
+			width: 100%;
+		}
+		
+		#text {
+			background-color: #BB8FCE;
+			border: none;
+			font-family: 'Oswald';
+			font-size: 40px;
+			color: #FDFEFE;
+			width: 100%;
+			text-align: right;
+		}
+		
+		#button:hover {
+			border: none;
+			background: #EC7063;
+		}
+
+		footer{
+			margin: 15px 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<form>
+			<table>
+				<tr>
+					<td colspan="4"><input type="text" id="text"></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="1" id="button"></td>
+					<td><input type="button" value="2" id="button"></td>
+					<td><input type="button" value="3" id="button"></td>
+					<td><input type="button" value="+" id="button"></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="4" id="button"></td>
+					<td><input type="button" value="5" id="button"></td>
+					<td><input type="button" value="6" id="button"></td>
+					<td><input type="button" value="-" id="button"></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="7" id="button"></td>
+					<td><input type="button" value="8" id="button"></td>
+					<td><input type="button" value="9" id="button"></td>
+					<td><input type="button" value="*" id="button"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="button" value="0" id="button"></td>
+					<td><input type="button" value="." id="button"></td>
+					<td><input type="button" value="/" id="button"></td>
+				</tr>
+			</table>
+		</form>
+	</main>
+
+	<footer>
+		<hr>
+		<a href="../../index.html">Return to index page</a>
+	</footer>
+</body>
+
+</html>

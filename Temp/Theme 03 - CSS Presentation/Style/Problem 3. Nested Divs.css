@@ -1,0 +1,35 @@
+.divs-60 div {
+	background: #000;
+	border: 1px solid red;
+	border-radius: 60px;
+	padding-right: 3%;
+}
+
+.divs-120 div {
+	background: #000;
+	border: 1px solid red;
+	border-radius: 120px;
+	padding-right: 1.5%;
+}
+
+.divs-240 div {
+	background: #000;
+	border: 1px solid red;
+	border-radius: 240px;
+	padding-right: 0.75%;
+}
+
+section {
+	padding: 0px;
+	margin: 0px;
+}
+
+h1 {
+	text-align: center;
+	text-decoration: underline;
+	font-size: 45px;
+	margin: 0px;
+	padding: 0px;
+	margin-top: 50px;
+	margin-bottom: 10px;
+}

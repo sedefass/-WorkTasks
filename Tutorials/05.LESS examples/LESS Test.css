@@ -1,0 +1,75 @@
+/* LESS can be parsed on the client(browser)
+    <link rel="stylesheet/less" type="text/css" href="styles.less"/ >
+    <sсript src="less.js"></sсript> //after the less link
+it also can be done with plug-ins like Easy LESS for VSCode
+*/
+/*selector nesting*/
+body {
+  font: normal 16px arial;
+  color: #fff;
+  background-color: #011b63;
+}
+body h1 {
+  font-size: 2.3em;
+  font-weight: bold;
+}
+/*Selectors can also reference themselves inside their selector using the symbol &*/
+a {
+  color: black;
+}
+a:hover {
+  color: red;
+}
+/*LESS also has variables*/
+a {
+  color: #ffffff;
+}
+a:visited {
+  color: #646363;
+}
+/*LESS variables can be inserted as CSS properties*/
+a {
+  border-top: 15px ridge blue;
+}
+/*The :extend pseudo selector can be used to extend a selector*/
+nav ul {
+  background: blue;
+}
+.inline,
+nav ul {
+  color: red;
+}
+/*LESS support predefined functions   http://lesscss.org/functions/*/
+a {
+  background-color: #ffffff;
+  color: #d9d9d9;
+}
+/*Mixins*/
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+ul#main-nav {
+  zoom: 1;
+}
+ul#main-nav:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+div {
+  padding: 33px;
+}
+div div {
+  padding: 55px;
+}
+/*Mixin Guards*/
+div a div {
+  background-color: white; 
+}

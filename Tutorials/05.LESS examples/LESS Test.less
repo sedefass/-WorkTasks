@@ -1,0 +1,100 @@
+/* LESS can be parsed on the client(browser)
+    <link rel="stylesheet/less" type="text/css" href="styles.less"/ >
+    <sсript src="less.js"></sсript> //after the less link
+it also can be done with plug-ins like Easy LESS for VSCode
+*/
+
+/*selector nesting*/
+body {
+    font: normal 16px arial;
+    color: #fff;
+    background-color: #011b63;
+    h1 {
+        font-size: 2.3em;
+        font-weight: bold;
+    }
+}
+
+/*Selectors can also reference themselves inside their selector using the symbol &*/
+ a {
+   color: black;
+   &:hover { color: red; }
+ }
+
+/*LESS also has variables*/
+@link-color: #ffffff;
+@v-link-color: #646363;
+a {
+  color: @link-color;
+  &:visited {
+    color: @v-link-color;
+  }
+}
+
+/*LESS variables can be inserted as CSS properties*/
+@border-side: top;
+@border-color: blue;
+@border-style: ridge;
+@border-width: 15px;
+
+a{
+    border-@{border-side}: @border-width @border-style @border-color;
+}
+
+/*The :extend pseudo selector can be used to extend a selector*/
+nav ul {
+  &:extend(.inline);
+  background: blue;
+}
+.inline {
+  color: red;
+}
+
+/*LESS support predefined functions   http://lesscss.org/functions/*/
+@color: #ffffff;
+a{
+    background-color: lighten(@color, 10%);
+    color: darken(@color, 15%);
+}
+
+
+/*Mixins*/
+.clearfix {
+    zoom: 1;
+    &:after {
+        display: block;
+        content: "";
+        height: 0;
+        clear: both;
+    }
+}
+
+ul#main-nav{
+  .clearfix;
+}
+
+.average(@x, @y) {
+  @average: ((@x + @y) / 2);
+}
+
+div {
+  .average(16px, 50px); // "call" the mixin
+  padding: @average;    // use its "return" value
+}
+
+div div {
+  .average(50px, 60px); // "call" the mixin
+  padding: @average;    // use its "return" value
+}
+
+
+/*Mixin Guards*/
+.mixin (@a) when (lightness(@a) >= 50%) {
+    background-color: white;
+}
+.mixin (@a) when (lightness(@a) < 50%) {
+    background-color: black;
+}
+div a div{
+  .mixin(red);
+}

@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    margin: 5px auto;
+    width: 95%;
+    min-width: 850px;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    font-family: sans-serif;
+}
+    nav ul { 
+        text-align: center;
+        margin: 0 40px 15px 40px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid black; 
+    }
+    nav li { 
+        display: inline-block; 
+        padding-right: 5px;
+    }
+    nav ul li a {
+        color: #1DB7F1;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    nav ul li:last-of-type {
+        padding: 0;
+    }
+
+    main{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+        main section#leftContainer{
+            position: relative;
+            width: 80%;
+            border: 3px solid black;
+            padding: 15px 0 0 15px;
+        }
+        main section#rightContainer{
+            position: relative;
+            width: 20%;
+            text-align: center;
+            font-size: 20px;
+        }
+            main section#leftContainer div.product-wrap{
+                position: relative;
+                width: 300px;
+                float: left;
+                border: 3px solid black;
+                margin: 5px 15px 15px 0;
+                padding: 5px;
+                padding-top: 15px;
+            }
+                main section#leftContainer div.product-wrap h2{
+                    position: absolute;
+                    top: -12px;
+                    left: 15px;
+                    padding: 0 5px;
+                    font-size: 20px;
+                    background: white;
+                    
+                }
+                main section#leftContainer div.product-wrap img{
+                    float: left;
+                    width: 125px;
+                    margin-right: 15px;
+                }
+                main section#leftContainer div.product-wrap ul li{
+                    display: inline-block; 
+                    padding-bottom: 15px;
+                }
+            main section#rightContainer input[type="range"]{
+                width: 70%;
+            }
+
+
+
+/*
+    article {
+        position: relative;
+        overflow: hidden;
+        padding: 10px 224px 0 0;
+    }
+    article section {
+        float: left;
+        margin: 0 0 10px 10px;
+        padding: 10px 20px;
+        width: 265px;
+    }
+    article h2 {
+        float: left;
+        margin-top: -0.85em;
+        padding: 0 7px;
+        background: #fff;
+    }
+    article ul {
+        float: right;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    article li {
+        margin-bottom: 10px;
+    }
+    aside {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 202px;
+        text-align: center;
+    }
+    aside dl, aside dt, aside dd { 
+        margin: 0; 
+    }
+    */

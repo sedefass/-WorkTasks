@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Registration Form</title>
+</head>
+
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	
+	table {
+		border: 1px solid black;
+		border-spacing: 0px;
+		margin: 15px 0px 0px 10px;
+		width: 600px;
+	}
+	
+	th,
+	td {
+		border: 1px solid black;
+		padding: 5px;
+	}
+	
+	footer {
+		margin: 15px 0px 0px 10px;
+	}
+	
+	td.table_left_part {
+		width: 30%;
+		font-weight: bold;
+		text-align: right;
+	}
+	
+	.row {
+		width: 100%;
+		margin: 0 auto;
+	}
+	
+	.block {
+		width: 40%;
+		float: left;
+	}
+	.block_text {
+		font-weight: bold;
+		text-align: center;
+		width: 20%;
+		float: left;
+	}
+
+	.holder{
+		width: 100%;
+	}
+	.ZIP_PC{
+		width:35%;
+	}
+	textarea.holder{
+		width:100%;
+		height: 50px;
+	}
+	
+	tfoot {
+		background-color: cyan;
+	}
+</style>
+
+<body>
+	<main>
+		<form name="registrationForm" method="POST">
+			<table>
+				<tr>
+					<td class="table_left_part">Last Name</td>
+					<td><input type="text" class="holder" placeholder="Enter Last Name" /></td>
+				</tr>
+				<tr>
+					<td class="table_left_part">First Name</td>
+					<td><input type="text" class="holder" placeholder="Enter First Name" /></td>
+				</tr>
+				<tr>
+					<td class="table_left_part">Adress</td>
+					<td><textarea type="text" class="holder" name="Adress" placeholder="Enter Adress"></textarea></td>
+				</tr>
+				<tr>
+					<td class="table_left_part">City</td>
+					<td class="row">
+						<div class="block"><input type="text" class="holder" placeholder="Enter City" /></div>
+						<div class="block_text">State</div>
+						<div class="block"><input type="text" class="holder" placeholder="Enter State" /></div>
+					</td>
+				</tr>
+				<tr>
+					<td class="table_left_part">Zip/Postal Code</td>
+					<td><input type="input" class="ZIP_PC" placeholder="Zip/Postal Code" /></td>
+				</tr>
+				<tr>
+					<td class="table_left_part">Country</td>
+					<td>
+						<select style="width:70%">
+                        <option value="Value 1" selected="selected">Bulgaria</option>
+                        <option value="Value 2">Germany</option>
+                        <option value="Value 2">France</option>
+                    </select>
+					</td>
+				</tr>
+				<tr>
+					<td class="table_left_part">Phone (country code,<br>area code, number)</td>
+					<td>
+						(+ <input type="text" style="width:50px" value="359" /> )
+						<input type="text" style="width:50px" placeholder="##" /> -
+						<input type="text" style="width:155px" placeholder="#######" />
+					</td>
+				</tr>
+				<tr>
+					<td class="table_left_part">E-mail</td>
+					<td><input type="email" class="holder" placeholder="Enter E-mail" /></td>
+				</tr>
+				<tr>
+					<td class="table_left_part">Birth date</td>
+					<td>
+						Month <input type="text" style="width:30px" placeholder="##" /> Day
+						<input type="text" style="width:30px" placeholder="##" /> Year(4 digits)
+						<input type="text" style="width:60px" placeholder="#######" />
+					</td>
+				</tr>
+				<tr>
+					<td class="table_left_part">Gender</td>
+					<td>
+						<select style="width:35%">
+                        <option value="Value 1" selected="selected">Male</option>
+					    <option value="Value 2">Female</option>
+                    </select>
+					</td>
+				</tr>
+				<tr>
+					<td class="table_left_part">Starting date</td>
+					<td>
+						<input type="radio" name="startDate" value="Spring 2016" id="startDateSpring" checked> <label for="startDateSpring">Spring 2016</label> 
+						<input type="radio" name="startDate" value="Summer 2016" id="startDateSummer"> <label for="startDateSummer">Summer 2016</label>  
+					</td>
+				</tr>
+				<tr>
+					<td class="table_left_part">Comments/Questions</td>
+					<td><textarea type="text" class="holder" name="Adress" placeholder="Enter Your Comments/Questions"></textarea></td>
+				</tr>
+
+				<tfoot>
+					<tr>
+						<td colspan="4">
+							<p align="center">
+								<input type="submit" value="Submit" />
+								<input type="reset" value="Clear This Form" />
+							</p>
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+		</form>
+	</main>
+
+	<footer>
+		<hr>
+		<a href="../../index.html">Return to index page</a>
+	</footer>
+</body>
+
+</html>
