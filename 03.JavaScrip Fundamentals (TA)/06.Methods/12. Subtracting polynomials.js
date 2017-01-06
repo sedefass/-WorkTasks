@@ -1,7 +1,1 @@
-function solve(args){
-
-}
-
-var test;
-
-solve(test);
+//Task information is lost in space and time (error 404 in gitHub)

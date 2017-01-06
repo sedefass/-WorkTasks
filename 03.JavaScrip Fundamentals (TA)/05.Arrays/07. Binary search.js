@@ -2,8 +2,8 @@ function solve(args){
     let arr = args;
 
     let searchNumber = +arr[arr.length - 1];
-    let leftIndex = 1; //first element is the total count of numbers among which is the binary search
-    let rightIndex = arr.length - 2; //last element is the search number
+    let leftIndex = 1;
+    let rightIndex = arr.length - 2;
     let index = 0;
     let check = false;
 

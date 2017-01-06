@@ -1,8 +1,10 @@
 function solve(args){
+    const name = args[0];
 
+    console.log('Hello, ' + name + '!');
 }
 
-var test;
+var test = ['Stefan'];
 
 solve(test);
 

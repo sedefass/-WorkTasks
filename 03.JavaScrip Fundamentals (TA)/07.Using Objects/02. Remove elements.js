@@ -1,7 +1,48 @@
-function solve(args){
+function solve(args) {
+    Array.prototype.remove = function (valueToRemove) {
+        index = this.indexOf(valueToRemove);
+        while (index >= 0) {
+            this.splice(index, 1);
+            index = this.indexOf(valueToRemove);
+        }
+    };
 
+    var valueToRemove = args[0];
+    var arr = args.shift();
+
+    arr.remove(valueToRemove);
+    console.log(arr);
 }
 
-var test;
+var test = ['1', '2', '3', '2', '1', '2', '3', '2'];
 
 solve(test);
+
+
+//how does it works
+Array.prototype.remove = function (valueToRemove) {
+    index = this.indexOf(valueToRemove);
+    while (index >= 0) {
+        this.splice(index, 1);
+        index = this.indexOf(valueToRemove);
+    }
+};
+
+var valueToRemove = '1';
+var test = ['1', '2', '3', '2', '1', '2', '3', '2'];
+
+test.remove(valueToRemove);
+console.log(test);
+
+
+
+//Example of Array.prototype.myFunction
+Array.prototype.myUpperCase = function () {
+    for (i = 0; i < this.length; i++) {
+        this[i] = this[i].toUpperCase();
+    }
+};
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.myUpperCase();
+console.log(fruits);
