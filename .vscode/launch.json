@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "C:/xampp/htdocs/-WorkTasks/03.JavaScrip Fundamentals (TA)/05.Arrays/07. Binary search.js",
+            "program": "D:/Projects/Telerik/!Autumn 2016/WorkTasks/03.JavaScrip Fundamentals (TA)/08.Methods on Arrays and Objects\test.js",
             "cwd": "${workspaceRoot}"
         },
         {
