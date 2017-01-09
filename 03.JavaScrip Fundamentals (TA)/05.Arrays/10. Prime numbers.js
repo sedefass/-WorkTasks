@@ -35,3 +35,23 @@ function solve(args) {
 }
 
 solve(['113']);
+
+//------------------------------------------
+
+function solve(args) {
+    var N = parseInt(args);
+
+    for (var i = N; i > 1; i--) {
+        var is_prime = true;
+        for (var j = 2; j < Math.sqrt(N); j += 1) {
+            if (i % j === 0) {
+                is_prime = false;
+                break;
+            }
+        }
+        if (is_prime) {
+            console.log(i);
+            break;
+        }
+    }
+}

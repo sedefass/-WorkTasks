@@ -8,10 +8,12 @@ function solve(args) {
     };
 
     var valueToRemove = args[0];
-    var arr = args.shift();
+    var arr = args;
 
     arr.remove(valueToRemove);
-    console.log(arr);
+    for (var i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+    }
 }
 
 var test = ['1', '2', '3', '2', '1', '2', '3', '2'];
