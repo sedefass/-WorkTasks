@@ -21,17 +21,18 @@ function solve(args) {
     }
 
     function printYoungest(inputArr) {
-        var indexOfYoungerPerson = 0;
+        var indexOfYoungestPerson = 0;
         var minAge = inputArr[0].age;
         var inputArrLength = inputArr.length;
 
         for (var i = 1; i < inputArrLength; i++) {
-            if (inputArr[i].age <= minAge) {
-                indexOfYoungerPerson = i;
+            if (inputArr[i].age < minAge) {
+                minAge = inputArr[i].age;
+                indexOfYoungestPerson = i;
             }
         }
 
-        console.log(inputArr[indexOfYoungerPerson].firstName + " " + inputArr[indexOfYoungerPerson].secondName);
+        console.log(inputArr[indexOfYoungestPerson].firstName + " " + inputArr[indexOfYoungestPerson].secondName);
     }
 
     var arrOfPeople = inputToPersonArray(args);
@@ -40,13 +41,48 @@ function solve(args) {
 }
 
 var args = [
-    'Penka', 'Hristova', '61',
+    'Penka', 'Hristova', '72',
     'System', 'Failiure', '88',
     'Bat', 'Man', '16',
-    'Malko', 'Kote', '72'
+    'Malko', 'Kote', '61'
 ];
 
 solve(args);
+
+//----------------------------------------------------------------------------------
+
+function solve(args) {
+    function makePerson(fname, lname, age) {
+        return {
+            firstName: fname,
+            lastName: lname,
+            age: age
+        }
+    }
+
+    var personArr = [],
+        i,
+        minAge = Infinity,
+        name, index = 0;
+
+    for (i = 0; i < args.length; i += 3) {
+        var fname = args[i],
+            lname = args[i + 1],
+            age = +args[i + 2];
+
+        personArr[index] = makePerson(fname, lname, age);
+        index += 1;
+    }
+
+    for (i = 0; i < personArr.length; i += 1) {
+        if (minAge > personArr[i].age) {
+            minAge = personArr[i].age;
+            name = personArr[i].firstName + " " + personArr[i].lastName;
+        }
+    }
+
+    console.log(name);
+}
 
 //----------------------------------------------------------------------------------
 

@@ -13,8 +13,8 @@ let cat = {
 catName = 'Changed';
 console.log(catName, cat.name); //demonstrating the reference type of objects
 //------------------------------------------------------------------------------------------------------------------------------
-function makeCat(name, color, age){
-    function mew(){
+function makeCat(name, color, age) {
+    function mew() {
         console.log('mew');
     }
 
@@ -39,8 +39,8 @@ const text = "Ние сме на лекция по програмиране и �
 
 let dictionary = {};
 
-for (let word of text){
-    if (!dictionary[word]){     //if there is no such word in dictionary dictionary[word] = undefined, which is false-like
+for (let word of text) {
+    if (!dictionary[word]) {     //if there is no such word in dictionary dictionary[word] = undefined, which is false-like
         dictionary[word] = 1;
     } else {
         dictionary[word]++;
@@ -49,4 +49,3 @@ for (let word of text){
 
 console.log(dictionary);
 //------------------------------------------------------------------------------------------------------------------------------
-
