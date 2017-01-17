@@ -12,7 +12,7 @@ function solve(args) {
         return formatted;
     };
 
-    console.log(args[1].format(JSON.parse(args[0])));//fortmat the JSON string into JS Object
+    console.log(args[1].format(JSON.parse(args[0])));//format the JSON string into JS Object
 }
 
 var test01 = [

@@ -10,9 +10,9 @@ function solve(args){
     server = split[1].substring(0,index);
     resource = split[1].substring(index);
 
-    console.log(protocol);
-    console.log(server);
-    console.log(resource);
+    console.log('protocol: ' + protocol);
+    console.log('server: ' + server);
+    console.log('resource: ' + resource);
 }
 
 var test = [ 'http://telerikacademy.com/Courses/Courses/Details/239' ];

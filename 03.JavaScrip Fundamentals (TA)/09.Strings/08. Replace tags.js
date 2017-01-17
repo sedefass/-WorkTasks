@@ -29,10 +29,10 @@ function solve(args) {
 
         var src = findPartialSubString(insideLinkTagsText, 'href="', '"');
 
-        var srcText = findPartialSubString(insideLinkTagsText, '>', '<');
+        var srcText = findPartialSubString(insideLinkTagsText, '>', '<\/a>');
 
         var replacement = ''.concat('[', srcText, '](', src, ')');
-        result = result.replace(insideLinkTagsText, replacement)
+        result = result.replace(insideLinkTagsText, replacement);
 
         return result;
     }
@@ -45,10 +45,10 @@ function solve(args) {
         while (insideLinkTagsText !== undefined) {
             var src = findPartialSubString(insideLinkTagsText, 'href="', '"');
 
-            var srcText = findPartialSubString(insideLinkTagsText, '>', '<');
+            var srcText = findPartialSubString(insideLinkTagsText, '>', '<\/a>');
 
             var replacement = ''.concat('[', srcText, '](', src, ')');
-            result = result.replace(insideLinkTagsText, replacement)
+            result = result.replace(insideLinkTagsText, replacement);
 
             insideLinkTagsText = findFullSubString(result, '<a', '<\/a>');
         }
@@ -60,6 +60,6 @@ function solve(args) {
     console.log(replaceAllLinkTags(text));
 }
 
-var test = ['<p>Please visit <a href="http://academy.telerik.com">our site</a> to choose a training course. Also visit <a href="www.devbg.org">our forum</a> to discuss the courses.</p>'];
+var test = ['<a href="http://academy.telerik.com">our site</a><p>Please visit <a href="http://academy.telerik.com">our site</a> to choose a training course. Also visit <a href="www.devbg.org">our forum</a> to discuss the courses.</p><a href="http://academy.telerik.com">our site</a>'];
 
 solve(test);

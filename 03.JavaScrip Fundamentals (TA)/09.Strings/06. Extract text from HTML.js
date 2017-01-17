@@ -26,7 +26,7 @@ function solve(args){
         input[i] = input[i].trim().removeTag();
     }
 
-    console.log(input.join(''));
+    return input.join('');
 }
 
 var test = [

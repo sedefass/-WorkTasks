@@ -6,7 +6,6 @@ function solve(args) {
             prop;
         output = this;
 
-        console.log(output.valueOf());
 
         for (prop in parameters) {
             regexContent = new RegExp('(<.*?data-bind-content="' + prop + '".*?>)(.*?)(<\\s*/.*?>)', 'g');
@@ -16,17 +15,14 @@ function solve(args) {
             output = output.replace(regexContent, function (element, openingTag, content, closingTag) {
                 return openingTag + parameters[prop] + closingTag;
             });
-            console.log(output);
 
             output = output.replace(regexClass, function (tag, contentBeforeClosing) {
                 return contentBeforeClosing + ' class="' + parameters[prop] + '">';
             });
-            console.log(output);
 
             output = output.replace(regexHref, function (tag, contentBeforeClosing) {
                 return contentBeforeClosing + ' href="' + parameters[prop] + '">';
             });
-            console.log(output);
         }
 
         return output;
@@ -82,14 +78,14 @@ console.log('<a data-bind-content="name" data-bind-href="link" data-bind-class="
 
 
 console.log('<div data-bind-content="name">Steven</div>' === '<div data-bind-content="name">Steven</div>');
-console.log('<a data-bind-content="name" data-bind-href="link" data-bind-class="name" class="Elena" href="http://telerikacademy.com">Elena</а>'
-    === '<a data-bind-content="name" data-bind-href="link" data-bind-class="name" href="http://telerikacademy.com" class="Elena">Elena</а>');
+// console.log('<a data-bind-content="name" data-bind-href="link" data-bind-class="name" class="Elena" href="http://telerikacademy.com">Elena</а>'
+//     === '<a data-bind-content="name" data-bind-href="link" data-bind-class="name" href="http://telerikacademy.com" class="Elena">Elena</а>');
 
-<a data-bind-content="name" data-bind-href="link" data-bind-class="name"></а>
-<a data-bind-content="name" data-bind-href="link" data-bind-class="name">Elena</а>
-<a data-bind-content="name" data-bind-href="link" data-bind-class="name" class="Elena">Elena</а>
-<a data-bind-content="name" data-bind-href="link" data-bind-class="name" class="Elena">Elena</а>
-<a data-bind-content="name" data-bind-href="link" data-bind-class="name" class="Elena">Elena</а>
-<a data-bind-content="name" data-bind-href="link" data-bind-class="name" class="Elena">Elena</а>
-<a data-bind-content="name" data-bind-href="link" data-bind-class="name" class="Elena" href="http://telerikacademy.com">Elena</а>
-<a data-bind-content="name" data-bind-href="link" data-bind-class="name" class="Elena" href="http://telerikacademy.com">Elena</а>
+// <a data-bind-content="name" data-bind-href="link" data-bind-class="name"></а>
+// <a data-bind-content="name" data-bind-href="link" data-bind-class="name">Elena</а>
+// <a data-bind-content="name" data-bind-href="link" data-bind-class="name" class="Elena">Elena</а>
+// <a data-bind-content="name" data-bind-href="link" data-bind-class="name" class="Elena">Elena</а>
+// <a data-bind-content="name" data-bind-href="link" data-bind-class="name" class="Elena">Elena</а>
+// <a data-bind-content="name" data-bind-href="link" data-bind-class="name" class="Elena">Elena</а>
+// <a data-bind-content="name" data-bind-href="link" data-bind-class="name" class="Elena" href="http://telerikacademy.com">Elena</а>
+// <a data-bind-content="name" data-bind-href="link" data-bind-class="name" class="Elena" href="http://telerikacademy.com">Elena</а>
