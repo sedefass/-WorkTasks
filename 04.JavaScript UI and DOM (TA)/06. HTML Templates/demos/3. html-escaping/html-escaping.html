@@ -13,7 +13,7 @@
 			</p>
 			<hr />
 			<p>
-				<strong>Not escaped</strong> (in the template): <span>{{{htmlString}}}</span>
+				<strong>Not escaped</strong> (in the template 3*{ does not escape the string): <span>{{{htmlString}}}</span>
 			</p>
 			<hr />
 			<p>
@@ -32,6 +32,7 @@
 			},
 			templateHtml = document.getElementById('template').innerHTML,
 			template = Handlebars.compile(templateHtml);
+			
 		document.getElementById('root').innerHTML = template(obj);
 
 	</script>

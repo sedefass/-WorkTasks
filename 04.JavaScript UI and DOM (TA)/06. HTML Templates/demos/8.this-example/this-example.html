@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Handlebars.js demos: Conditional expressions</title>
+</head>
+
+<body>
+    <div id="wrapper1"></div>
+    <hr />
+    <div id="wrapper2"></div>
+
+    <script type="text/x-handlebars-template" id="course-item-template">
+        {{#this}}
+            <div>{{this}}</div>
+        {{/this}}
+    </script>
+
+    <script type="text/x-handlebars-template" id="course-item-template2">
+        {{#this}}
+            <div>{{this.name}}</div>
+            <div>{{this.description}}</div>
+            <hr />
+        {{/this}}
+    </script>
+
+    <script src='..\libs\handlebars.min.js'></script>
+    <script>
+        /* globals Handlebars, document */
+        'use strict';
+        var wrapper = document.getElementById('wrapper1'),
+            htmlTempate = document.getElementById('course-item-template').innerText,
+            template = Handlebars.compile(htmlTempate),
+            otherData = [3, 4, 5, 6];
+
+        wrapper.innerHTML = template(otherData);
+    </script>
+
+<script>
+        /* globals Handlebars, document */
+        'use strict';
+        var wrapper = document.getElementById('wrapper2'),
+            htmlTempate = document.getElementById('course-item-template2').innerText,
+            template = Handlebars.compile(htmlTempate),
+            courses = [{
+            name: 'JavaScript Fundentals',
+            description: 'JavaScript basics, syntax, loops, functions, conditionals'
+        }, {
+            name: 'JavaScript UI & DOM',
+            description: 'Web graphics, HTML5 Canvas, SVG, Animations, DOM and DOM operations, Event Model, jQuery, HTML Templates,'
+        }, {
+            name: 'JavaScript OOP',
+            description: 'Creating modular apps using JavaScript, function contructors, prototypal and classical (functional) inheritance, modules'
+        }, {
+            name: 'JavaScript Applications',
+            description: 'Asyncronius execution with callbacks and promises, HTTP and AJAX, application architecture'
+        }, {
+            name: 'SPA applications with JavaScript',
+            description: 'KendoUI, AngularJS, App clouds'
+        }];;
+
+        wrapper.innerHTML = template(courses);
+    </script>
+</body>
+
+</html>

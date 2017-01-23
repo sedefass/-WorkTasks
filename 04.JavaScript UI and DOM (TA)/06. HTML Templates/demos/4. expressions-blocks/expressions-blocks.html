@@ -6,6 +6,7 @@
 </head>
 <body>
 	<div id="root"></div>
+
 	<script type="text/x-handlebars-template" id="categories-list-template">
 		<h1>Categiries:</h1>
 		<ul class="categories-list"> 
@@ -41,6 +42,7 @@
 			</footer>
 		</article>
 	</script>
+	
 	<script src='..\libs\handlebars.min.js'></script>
 	<script>
 	/* globals document, Handlebars */
@@ -87,6 +89,9 @@
 
 	categoriesTemplateHtml = document.getElementById('categories-list-template').innerHTML;
 	categoriesTemplate = Handlebars.compile(categoriesTemplateHtml);
+	//Take a look at the syntax: categories is an array of objects, not an object 
+	//({categories: categories}) means you are object that has that property
+	//It also works like that: document.getElementById('root').innerHTML = categoriesTemplate({categories});
 	document.getElementById('root').innerHTML = categoriesTemplate({
 		categories: categories
 	});

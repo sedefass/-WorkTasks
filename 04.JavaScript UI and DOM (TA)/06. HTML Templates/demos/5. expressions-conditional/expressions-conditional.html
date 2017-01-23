@@ -6,6 +6,7 @@
 </head>
 <body>
 	<div id="posts"></div>	
+
 	<script type="text/x-handlebars-template" id="posts-list-template">
 		<h1>Posts</h1>
 		<ul class="posts">
@@ -21,17 +22,18 @@
 			{{/posts}}
 		</ul>
 	</script>
+	
 	<script src='..\libs\handlebars.min.js'></script>
 	<script>
 	/* globals document, Handlebars */
 	'use strict';
 
 	function getPosts(count) {
-		var posts,
+		var posts = [],
 			post,
 			i;
 		count = count || 10;
-		posts = [];
+
 		for (i = 0; i < count; i += 1) {
 			post = {
 				id: i + 1,

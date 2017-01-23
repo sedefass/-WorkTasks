@@ -6,6 +6,7 @@
 </head>
 <body>
 	<div id="posts"></div>	
+
 	<script type="text/x-handlebars-template" id="posts-list-template">
 		<h1>Posts</h1>
 		<div class="posts">
@@ -14,7 +15,8 @@
 					<span class="number">{{@index}})</span>
 					<strong class="title">{{title}}</strong>
 					<br/>
-					{{#with author}}
+					<!--Inside this block it works with author properties, otherwise the code should be like {{author.name}}, not just {{name}}-->
+					{{#with author}} 
 						<strong class="author">{{name}}</strong>
 					{{/with}}
 					<hr/>
@@ -34,13 +36,22 @@
 		count = count || 10;
 		posts = [];
 		for (i = 0; i < count; i += 1) {
-			posts.push({
+			if(i % 4 !== 0){
+				posts.push({
 				id: i + 1,
 				title: 'Post #' + (i + 1),
 				author: {
-					name: 'Author #' + (i + 3)
+					name: 'Author #' + (i + 3) * 2
 				}
-			});
+				});
+			} else {
+				posts.push({
+				id: i + 1,
+				title: 'Post #' + (i + 1),
+				});
+			}
+			
+			
 		}
 		return posts;
 	}

@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Handlebars demos: Setup and Usage</title>
@@ -19,31 +20,52 @@
 		}
 	</style>
 </head>
+
 <body>
-	<div id="root"></div>	
+	<div id="root"></div>
+	<hr>
+	<!--my div to test adding templates in a loop-->
+	<div id="my-test"></div>
+
 	<script type="text/x-handlebars-template" id="post-template">
 		<div class='post'>
 			<h1 class="post-title">{{title}}</h1>
 			<p class="post-content">{{{content}}}</p>
 		</div>
 	</script>
+
+	<!--loads the Handlebars library-->
 	<script src='..\libs\handlebars.min.js'></script>
 	<script>
-	var post,
-		postTemplateHTML,
-		postTemplate;
-	post = {
-		title: 'Creating templates with Handlebars.js',
-		content: 'Creating templates with Handlebars.js is pretty easy and intuitive. Handlebars.js supports <strong>one-way data-binding</strong> and defines dynamic HTML.'
-	};
+		var post,
+			postTemplateHTML,
+			postTemplate;
+		post = {
+			title: 'Creating templates with Handlebars.js',
+			content: 'Creating templates with Handlebars.js is pretty easy and intuitive. Handlebars.js supports <strong>one-way data-binding</strong> and defines dynamic HTML.'
+		};
 
-	postTemplateHTML = document.getElementById('post-template').innerHTML;
+		//Selecting the template
+		postTemplateHTML = document.getElementById('post-template').innerHTML;
 
-	postTemplate = Handlebars.compile(postTemplateHTML);
+		//Creating the content with the selected template
+		postTemplate = Handlebars.compile(postTemplateHTML);
 
-	document.getElementById('root').innerHTML = postTemplate(post);
+		//Adding the content to the DOM
+		document.getElementById('root').innerHTML = postTemplate(post);
 
+		for (var i = 0; i < 5; i++) {
+			var templateDiv = document.createElement('div');
+			var myTest = document.getElementById('my-test');
 
+			post.title = 'Creating templates with Handlebars.js in a loop No.' + (i + 1);
+
+			templateDiv.className = 'template-div';
+			
+			templateDiv.innerHTML = postTemplate(post);
+			myTest.appendChild(templateDiv);
+		}
 	</script>
 </body>
+
 </html>
