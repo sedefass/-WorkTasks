@@ -16,7 +16,13 @@
         "substrings",
         "whitespaces",
         "divs",
-        "unordered"
+        "unordered",
+        "doesnt",
+        "dsadas",
+        "IIFE",
+        "objs",
+        "Rect",
+        "callee"
     ],
     // flagWords - list of words to be always considered incorrect
     // This is useful for offensive words and common spelling errors.
