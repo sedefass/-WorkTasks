@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JavaScript APIs - Drag and Drop</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="drag-drop.js"></script>
+</head>
+<body>
+    <div id="container" ondrop="drop(event)" ondragover="allowDrop(event)" onmouseout="closeContainer('container')"></div>
+    <button onclick="viewTopScores()">View Top Scores</button>
+    <img id="first" draggable="true" ondragstart="drag(event)" src="images/paper.png"/>
+    <img id="secont" draggable="true" ondragstart="drag(event)" src="images/paper.png"/>
+    <img id="third" draggable="true" ondragstart="drag(event)" src="images/paper.png"/>
+</body>
+</html>
