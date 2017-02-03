@@ -10,7 +10,7 @@ class SomeVehicle {
 }
 
 class SomePerson implements IPerson {
-    private static idNum: number = 1;
+    private idNum: number = 1;
 
     firstName: string;
     lastName: string;
@@ -21,8 +21,8 @@ class SomePerson implements IPerson {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
-        this.id = SomePerson.idNum.toString();
-        SomePerson.idNum++;
+        this.id = this.idNum.toString();
+        this.idNum++;
     }
 
     greet(): string {

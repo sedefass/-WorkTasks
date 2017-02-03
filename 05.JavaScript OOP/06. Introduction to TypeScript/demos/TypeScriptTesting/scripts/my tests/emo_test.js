@@ -29,3 +29,4 @@ function filter(callback) {
         callback(arguments);
     });
 }
+a(function(v, i, ar, gf) {console.log(arguments)});
